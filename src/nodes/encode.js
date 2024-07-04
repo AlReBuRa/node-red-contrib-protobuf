@@ -33,8 +33,9 @@ ${msg.protobufType}
                 `);
                 return node.status({fill: 'yellow', shape: 'dot', text: 'Message type not found'});
             }
-            if (messageType.verify(msg.payload)) {
-                node.warn('Message is not valid under selected message type.');
+            var ret = messageType.verify(msg.payload)
+            if (ret) {
+                node.warn('Message is not valid under selected message type. Err='+JSON.stringify(ret));
                 return node.status({fill: 'yellow', shape: 'dot', text: 'Message invalid'});
             }
             // create a protobuf message and convert it into a buffer
