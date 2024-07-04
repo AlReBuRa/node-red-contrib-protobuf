@@ -39,6 +39,6 @@
     "should": "13.2.3"
   },
   "dependencies": {
-    "protobufjs": "^7.0.0"
+    "protobufjs": "AlReBuRa/protobuf.js#ca3a23292c5cd6a984975445f3c0e67d16da2936"
   }
 }
